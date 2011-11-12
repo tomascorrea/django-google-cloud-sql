@@ -1,0 +1,50 @@
+Downloading/unpacking mysqldb
+  Getting page http://pypi.python.org/simple/mysqldb
+  Could not fetch URL http://pypi.python.org/simple/mysqldb: HTTP Error 404: Not Found (MySQLdb does not have any releases)
+  Will skip URL http://pypi.python.org/simple/mysqldb when looking for download links for mysqldb
+  Getting page http://pypi.python.org/simple/
+  Real name of requirement mysqldb is MySQLdb
+  URLs to search for versions for mysqldb:
+  * http://pypi.python.org/simple/MySQLdb/
+  Getting page http://pypi.python.org/simple/MySQLdb/
+  Could not fetch URL http://pypi.python.org/simple/MySQLdb/: HTTP Error 404: Not Found (MySQLdb does not have any releases)
+  Will skip URL http://pypi.python.org/simple/MySQLdb/ when looking for download links for mysqldb
+  Could not find any downloads that satisfy the requirement mysqldb
+No distributions at all found for mysqldb
+Exception information:
+Traceback (most recent call last):
+  File "/home/tomas/python-virtualenv/appengine/lib/python2.5/site-packages/pip-0.6.3-py2.5.egg/pip/basecommand.py", line 115, in main
+    self.run(options, args)
+  File "/home/tomas/python-virtualenv/appengine/lib/python2.5/site-packages/pip-0.6.3-py2.5.egg/pip/commands/install.py", line 155, in run
+    requirement_set.install_files(finder, force_root_egg_info=self.bundle, bundle=self.bundle)
+  File "/home/tomas/python-virtualenv/appengine/lib/python2.5/site-packages/pip-0.6.3-py2.5.egg/pip/req.py", line 823, in install_files
+    url = finder.find_requirement(req_to_install, upgrade=self.upgrade)
+  File "/home/tomas/python-virtualenv/appengine/lib/python2.5/site-packages/pip-0.6.3-py2.5.egg/pip/index.py", line 117, in find_requirement
+    raise DistributionNotFound('No distributions at all found for %s' % req)
+DistributionNotFound: No distributions at all found for mysqldb
+------------------------------------------------------------
+/home/tomas/python-virtualenv/appengine/bin/pip run on Sat Nov 12 13:24:56 2011
+Downloading/unpacking MySQLdb
+  Getting page http://pypi.python.org/simple/MySQLdb
+  Could not fetch URL http://pypi.python.org/simple/MySQLdb: HTTP Error 404: Not Found (MySQLdb does not have any releases)
+  Will skip URL http://pypi.python.org/simple/MySQLdb when looking for download links for MySQLdb
+  Getting page http://pypi.python.org/simple/
+  Real name of requirement MySQLdb is MySQLdb
+  URLs to search for versions for MySQLdb:
+  * http://pypi.python.org/simple/MySQLdb/
+  Getting page http://pypi.python.org/simple/MySQLdb/
+  Could not fetch URL http://pypi.python.org/simple/MySQLdb/: HTTP Error 404: Not Found (MySQLdb does not have any releases)
+  Will skip URL http://pypi.python.org/simple/MySQLdb/ when looking for download links for MySQLdb
+  Could not find any downloads that satisfy the requirement MySQLdb
+No distributions at all found for MySQLdb
+Exception information:
+Traceback (most recent call last):
+  File "/home/tomas/python-virtualenv/appengine/lib/python2.5/site-packages/pip-0.6.3-py2.5.egg/pip/basecommand.py", line 115, in main
+    self.run(options, args)
+  File "/home/tomas/python-virtualenv/appengine/lib/python2.5/site-packages/pip-0.6.3-py2.5.egg/pip/commands/install.py", line 155, in run
+    requirement_set.install_files(finder, force_root_egg_info=self.bundle, bundle=self.bundle)
+  File "/home/tomas/python-virtualenv/appengine/lib/python2.5/site-packages/pip-0.6.3-py2.5.egg/pip/req.py", line 823, in install_files
+    url = finder.find_requirement(req_to_install, upgrade=self.upgrade)
+  File "/home/tomas/python-virtualenv/appengine/lib/python2.5/site-packages/pip-0.6.3-py2.5.egg/pip/index.py", line 117, in find_requirement
+    raise DistributionNotFound('No distributions at all found for %s' % req)
+DistributionNotFound: No distributions at all found for MySQLdb
