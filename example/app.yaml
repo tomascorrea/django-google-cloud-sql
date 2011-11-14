@@ -18,15 +18,15 @@ handlers:
   static_dir: static
 
 - url: /_ah/queue/deferred
-  script: djangoappengine/deferred/handler.py
+  script: djangoappengine_rdbms/deferred/handler.py
   login: admin
 
 - url: /_ah/stats/.*
-  script: djangoappengine/appstats/ui.py
+  script: djangoappengine_rdbms/appstats/ui.py
 
 - url: /media/admin
   static_dir: django/contrib/admin/media
   expiration: '0'
 
 - url: /.*
-  script: djangoappengine/main/main.py
+  script: djangoappengine_rdbms/main/main.py

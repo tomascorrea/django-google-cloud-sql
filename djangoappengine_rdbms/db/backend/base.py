@@ -4,7 +4,7 @@ from django.db.backends.mysql.base import CursorWrapper
 
 
 
-from ..utils import appid
+from ...utils import appid
 
 class DatabaseWrapper(MysqlDatabaseWrapper):
     
@@ -14,6 +14,8 @@ class DatabaseWrapper(MysqlDatabaseWrapper):
 
 
     def _cursor(self):
+        from ...boot import setup_rdbms
+        setup_rdbms()
         from google.appengine.api import rdbms
         conn = rdbms.connect(
                             instance=appid, 

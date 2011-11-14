@@ -1,6 +1,6 @@
 # Django settings for example project.
 
-from djangoappengine.settings_base import *
+from djangoappengine_rdbms.settings_base import *
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -13,7 +13,7 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'gcs_backend.db',
+        'ENGINE': 'djangoappengine_rdbms.db.backend',
         'NAME': 'django-google-cloud-sql',                  # Or path to database file if using sqlite3.
         'USER': 'root',                         # Not used with sqlite3.
         'PASSWORD': 'root',
@@ -51,7 +51,7 @@ MEDIA_URL = ''
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/media/'
+ADMIN_MEDIA_PREFIX = '/media/admin/'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'w89xat6&=s-r-9*)%#b!r5ul=v&7y1%e4cj=$a^-@rkgk6__v3'
@@ -78,7 +78,7 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
-    'gcs_backend',
+    'djangoappengine_rdbms',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',

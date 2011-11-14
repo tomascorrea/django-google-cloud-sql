@@ -4,7 +4,7 @@ import sys
 
 from django.db import connections
 from ...boot import PROJECT_DIR
-from ...db.base import DatabaseWrapper
+from ...db.backend.base import DatabaseWrapper
 from django.core.management.base import BaseCommand
 from django.core.management.commands.runserver import BaseRunserverCommand
 from django.core.exceptions import ImproperlyConfigured

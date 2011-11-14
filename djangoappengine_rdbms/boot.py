@@ -66,6 +66,8 @@ def setup_env():
         sys.path = extra_paths + sys.path
         from google.appengine.api import apiproxy_stub_map
 
+    
+
     setup_project()
     from .utils import have_appserver
     if have_appserver:
@@ -142,6 +144,8 @@ def setup_project():
             # Backup the buffer() builtin. The subprocess in Python 2.5 on
             # Linux and OS X uses needs it, but the dev_appserver removes it.
             dev_appserver.buffer = buffer
+            
+
         except AttributeError:
             logging.warn('Could not patch the default environment. '
                          'The subprocess module will not work correctly.')
@@ -186,3 +190,21 @@ def setup_project():
             while path in sys.path:
                 sys.path.remove(path)
         sys.path = extra_paths + sys.path
+
+
+
+def setup_rdbms():
+    from db.backend.base import DatabaseWrapper
+    from django.db import connections
+    for connection in connections.all():
+        if isinstance(connection, DatabaseWrapper):
+            from google.appengine.api import rdbms_mysqldb
+            from google.appengine import api
+            sys.modules['google.appengine.api.rdbms'] = rdbms_mysqldb
+            api.rdbms = rdbms_mysqldb
+            rdbms_mysqldb.SetConnectKwargs(
+                                            host=connection.settings_dict["HOST"],
+                                            user=connection.settings_dict["USER"], 
+                                            passwd=connection.settings_dict["PASSWORD"]
+                                            )
+            rdbms_mysqldb.connect(database='')
