@@ -1,5 +1,11 @@
-Just Started - Just a Draft. 
-It is almost working.
+h1. djangoappengine_rbdms
+
+This project ains to write native django code and run in the Google AppEngine.
+
+h2. WARNINGS
+
+It is working with some limitations, it is not tested and I'm NOT using it.
+The remote command is not working at all.
 DO NOT USE!!
 
 Toolkit for use django with Google Cloud SQL in AppEngine
@@ -35,7 +41,19 @@ pre. DATABASES = {
     }
 }
 
+h2. RUNNING:
 
+Just run the default runserver django command
+
+pre. ./manage.py runserver
+
+
+h2. DEPLOY:
+
+pre. ./manage.py deploy
+
+As long as the remote command is not working I used the command line tool provide by Google to
+setup up the DB.
 
 h2. TODO:
 
