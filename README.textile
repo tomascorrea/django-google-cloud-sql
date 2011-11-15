@@ -1,6 +1,9 @@
 h1. djangoappengine_rbdms
 
-This project ains to write native django code and run in the Google AppEngine.
+
+This is a toolkit to run native django code and run in the Google AppEngine.
+This project is inspired (forked) in the very google djangoappengine project. I based many code and modules
+in that project.
 
 h2. WARNINGS
 
@@ -8,9 +11,7 @@ It is working with some limitations, it is not tested and I'm NOT using it.
 The remote command is not working at all.
 DO NOT USE!!
 
-Toolkit for use django with Google Cloud SQL in AppEngine
 
-This project is inspired (forked) in the very google djangoappengine project.
 
 h2. INSTALATION:
 
