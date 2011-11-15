@@ -2,7 +2,8 @@ import re
 import sys
 
 
-from ...utils import appid
+from ...utils import appid, on_production_server
+from .stubs import stub_manager
 
 from django.db.backends import *
 from django.db.backends.signals import connection_created
@@ -187,6 +188,19 @@ class DatabaseWrapper(BaseDatabaseWrapper):
         self.introspection = DatabaseIntrospection(self)
         self.validation = DatabaseValidation(self)
 
+        self.remote_app_id = self.settings_dict.get('REMOTE_APP_ID', appid)
+        self.domain = self.settings_dict.get('DOMAIN', 'appspot.com')
+        self.remote_api_path = self.settings_dict.get('REMOTE_API_PATH', None)
+        self.secure_remote_api = self.settings_dict.get('SECURE_REMOTE_API', True)
+        remote = self.settings_dict.get('REMOTE', False)
+        if on_production_server:
+            remote = False
+        if remote:
+            stub_manager.setup_remote_stubs(self)
+        else:
+            stub_manager.setup_stubs(self)
+
+
     def _valid_connection(self):
         if self.connection is not None:
             try:
@@ -198,8 +212,7 @@ class DatabaseWrapper(BaseDatabaseWrapper):
         return False
 
     def _cursor(self):
-        from ...boot import setup_rdbms
-        setup_rdbms()
+        
         from google.appengine.api import rdbms
         self.connection = rdbms.connect(
                             instance=self.settings_dict["INSTANCE"], 

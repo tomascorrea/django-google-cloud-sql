@@ -193,20 +193,4 @@ def setup_project():
 
 
 
-def setup_rdbms():
-    from .utils import have_appserver, on_production_server
-    if not on_production_server:
-        from db.backend.base import DatabaseWrapper
-        from django.db import connections
-        for connection in connections.all():
-            if isinstance(connection, DatabaseWrapper):
-                from google.appengine.api import rdbms_mysqldb
-                from google.appengine import api
-                sys.modules['google.appengine.api.rdbms'] = rdbms_mysqldb
-                api.rdbms = rdbms_mysqldb
-                rdbms_mysqldb.SetConnectKwargs(
-                                                host=connection.settings_dict["HOST"],
-                                                user=connection.settings_dict["USER"], 
-                                                passwd=connection.settings_dict["PASSWORD"]
-                                                )
-                rdbms_mysqldb.connect(database='')
+
