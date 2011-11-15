@@ -17,11 +17,11 @@ h2. SETUP:
 
 add the following line to your settings
 
-@from djangoappengine_rdbms.settings_base import * @
+pre. from djangoappengine_rdbms.settings_base import *
 
 and configure you database. 
 
-bq. DATABASES = {
+pre. DATABASES = {
     'default': {
         'ENGINE': 'djangoappengine_rdbms.db.backend',
         'INSTANCE': 'djangosqlcloudmysql:example', 
@@ -33,9 +33,8 @@ bq. DATABASES = {
 
 
 
-TODO: 
-Make remote commands work - Google Cloud SQL does not use the stub services.
-Strategy: Access the directely the instance like the command line tool provided by Google
+h2 .TODO:
 
-TODO: write better instalations intructions
+# Make remote commands work - Google Cloud SQL does not use the stub services. Strategy: Access the directely the instance like the command line tool provided by Google
+# write better instalations intructions
 
