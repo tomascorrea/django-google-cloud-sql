@@ -21,8 +21,7 @@ bq. from djangoappengine_rdbms.settings_base import *
 
 and configure you database. 
 
-bq.
-DATABASES = {
+bq. DATABASES = {
     'default': {
         'ENGINE': 'djangoappengine_rdbms.db.backend',
         'INSTANCE': 'djangosqlcloudmysql:example', 
