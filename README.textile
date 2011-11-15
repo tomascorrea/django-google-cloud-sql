@@ -6,13 +6,13 @@ Toolkit for use django with Google Cloud SQL in AppEngine
 
 This project is inspired (forked) in the very google djangoappengine project.
 
-h2. INSTALATION:
+h2. INSTALATION: .
 Basicaly setup a basic django project
 copy or synlink the djangoappengine_rdbms to the root of your project. 
 You should not install or put these files in the path beacuse they need to deployed to
 appengine.
 
-h2. SETUP
+h2. SETUP: .
 add the following line to your settings
 *
 from djangoappengine_rdbms.settings_base import *
