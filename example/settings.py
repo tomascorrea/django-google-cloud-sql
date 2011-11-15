@@ -14,7 +14,8 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'djangoappengine_rdbms.db.backend',
-        'NAME': 'django-google-cloud-sql',                  # Or path to database file if using sqlite3.
+        'INSTANCE': 'djangosqlcloudmysql:example', 
+        'NAME': 'example',                  # Or path to database file if using sqlite3.
         'USER': 'root',                         # Not used with sqlite3.
         'PASSWORD': 'root',
     }

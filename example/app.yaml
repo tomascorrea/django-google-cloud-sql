@@ -1,4 +1,4 @@
-application: django-google-cloud-sql
+application: djangosqlcloud
 version: 1
 runtime: python
 api_version: 1
