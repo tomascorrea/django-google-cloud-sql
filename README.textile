@@ -12,6 +12,11 @@ The remote command is not working at all.
 DO NOT USE!!
 
 
+h2. PRE-REQUISITS
+
+# GAE Instance created
+# Google SQL Cloud instance created
+# GAE SDK 1.6 instaled and working
 
 h2. INSTALATION:
 
