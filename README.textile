@@ -8,10 +8,14 @@ This project is inspired (forked) in the very google djangoappengine project.
 
 h2. INSTALATION:
 
-Basicaly setup a basic django project
-copy or synlink the djangoappengine_rdbms to the root of your project. 
+Basicaly setup a basic django project,
+
+pre. django-admin.py starproject example
+
+and copy or synlink the djangoappengine_rdbms to the root of your project. 
 You should not install or put these files in the path beacuse they need to deployed to
-appengine.
+appengine. You can also checkout the example project
+
 
 h2. SETUP: 
 
@@ -33,8 +37,8 @@ pre. DATABASES = {
 
 
 
-h2 .TODO:
+h2. TODO:
 
 # Make remote commands work - Google Cloud SQL does not use the stub services. Strategy: Access the directely the instance like the command line tool provided by Google
-# write better instalations intructions
+# Write better instalations intructions
 
