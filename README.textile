@@ -16,10 +16,12 @@ appengine.
 h2. SETUP: 
 
 add the following line to your settings
-@from djangoappengine_rdbms.settings_base import * @
+
+bq. from djangoappengine_rdbms.settings_base import * 
+
 and configure you database. 
 
-@
+bq.
 DATABASES = {
     'default': {
         'ENGINE': 'djangoappengine_rdbms.db.backend',
@@ -29,7 +31,7 @@ DATABASES = {
         'PASSWORD': 'root',
     }
 }
-@
+
 
 
 TODO: 
