@@ -59,5 +59,6 @@ setup up the DB.
 h2. TODO:
 
 # Make remote commands work - Google Cloud SQL does not use the stub services. Strategy: Access the directely the instance like the command line tool provided by Google
-# Write better instalations intructions
+# Write better instalations intructions.
+# Test, test, test
 
