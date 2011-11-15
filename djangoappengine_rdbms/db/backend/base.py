@@ -214,10 +214,11 @@ class DatabaseWrapper(BaseDatabaseWrapper):
     def _cursor(self):
         
         from google.appengine.api import rdbms
-        self.connection = rdbms.connect(
-                            instance=self.settings_dict["INSTANCE"], 
-                            database=self.settings_dict["NAME"])
-        connection_created.send(sender=self.__class__, connection=self)
+        if not self._valid_connection():
+            self.connection = rdbms.connect(
+                                instance=self.settings_dict["INSTANCE"], 
+                                database=self.settings_dict["NAME"])
+            connection_created.send(sender=self.__class__, connection=self)
         cursor = self.connection.cursor()
 
         return cursor

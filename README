@@ -5,3 +5,32 @@ DO NOT USE!!
 Toolkit for use django with Google Cloud SQL in AppEngine
 
 This project is inspired (forked) in the very google djangoappengine project.
+
+INSTALATION:
+Basicaly setup a basic django project
+copy or synlink the djangoappengine_rdbms to the root of your project. 
+You should not install or put these files in the path beacuse they need to deployed to
+appengine.
+add the following line to your settings
+
+from djangoappengine_rdbms.settings_base import *
+
+and configure you database. 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'djangoappengine_rdbms.db.backend',
+        'INSTANCE': 'djangosqlcloudmysql:example', 
+        'NAME': 'example',                  # Or path to database file if using sqlite3.
+        'USER': 'root',                         # Not used with sqlite3.
+        'PASSWORD': 'root',
+    }
+}
+
+
+TODO: 
+Make remote commands work - Google Cloud SQL does not use the stub services.
+Strategy: Access the directely the instance like the command line tool provided by Google
+
+TODO: write better instalations intructions
+

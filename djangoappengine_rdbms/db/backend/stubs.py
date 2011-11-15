@@ -123,7 +123,7 @@ class StubManager(object):
     def setup_local_rdbms(self, connection):
         
         from ...db.backend.base import DatabaseWrapper
-        
+
         if isinstance(connection, DatabaseWrapper):
             from google.appengine.api import rdbms_mysqldb
             from google.appengine import api
