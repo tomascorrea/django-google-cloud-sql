@@ -12,7 +12,7 @@ The remote command is not working at all.
 DO NOT USE!!
 
 
-h2. PRE-REQUISITS
+h2. PREREQUISITES
 
 # GAE Instance created
 # Google SQL Cloud instance created
@@ -20,6 +20,7 @@ h2. PRE-REQUISITS
 
 h2. INSTALATION:
 
+This instalation does not include the django instalation, or GAE SDK instalation.
 Basicaly setup a basic django project,
 
 pre. django-admin.py starproject example
