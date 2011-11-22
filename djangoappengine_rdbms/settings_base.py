@@ -13,9 +13,9 @@ TEMPLATE_DEBUG = DEBUG
 ROOT_URLCONF = 'urls'
 
 if on_production_server:
-    EMAIL_BACKEND = 'djangoappengine.mail.AsyncEmailBackend'
+    EMAIL_BACKEND = 'djangoappengine_rdbms.mail.AsyncEmailBackend'
 else:
-    EMAIL_BACKEND = 'djangoappengine.mail.EmailBackend'
+    EMAIL_BACKEND = 'djangoappengine_rdbms.mail.EmailBackend'
 
 # Specify a queue name for the async. email backend
 EMAIL_QUEUE_NAME = 'default'
