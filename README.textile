@@ -68,3 +68,9 @@ h2. TODO:
 # Write better instalations intructions.
 # Test, test, test
 
+h2. GAMBIARRA (a portugues word that means something like a "quick fix"):
+
+It is not possible yet (I hope) to access the Google Cloud SQL via stub infra-structures, 
+só a I plan adpat the http://shell.appspot.com/ to django shell insted of a python shell.
+
+
