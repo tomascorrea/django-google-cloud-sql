@@ -73,4 +73,10 @@ h2. GAMBIARRA (a portugues word that means something like a "quick fix"):
 It is not possible yet (I hope) to access the Google Cloud SQL via stub infra-structures, 
 só a I plan adpat the http://shell.appspot.com/ to django shell insted of a python shell.
 
+h2. GAMBIARRA 2 - webaccess to django manage.py commands
+
+add the following line to your urls in urls.py to access the manage.py commands.
+
+pre. (r'^appengine/admin/', include('djangoappengine_rdbms.urls')), 
+
 
