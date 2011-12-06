@@ -1,0 +1,12 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block content %}
+
+<h3>{% trans "Command list" %}</h3>
+<ul>
+{% for command in commands %}
+	<li><a href="{% url command_details command.app_name command.command_name %}">{{ command.command_name }}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}

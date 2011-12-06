@@ -1,0 +1,57 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block breadcrumbs %}
+    <div class="breadcrumbs">
+        {% trans "Home" %}
+       &rsaquo;
+       <a href="{% url commands %}">
+         {% trans "Commands" %}
+      </a>
+      &rsaquo;
+      {{ app_name }} &rsaquo; {{ command_name }}
+    </div>
+  {% endblock %}
+
+{% block content %}
+
+<h3>{{ app_name }} {{ command_name }}</h3>
+
+<p class="help">
+{{ command.help }}
+</p>
+
+
+
+<form action="." method="POST">
+<ul>
+{{ form.as_ul }}
+</ul>
+
+	<input type="submit" name="submit" value="execute command">
+
+</form>
+
+
+{% if stdout %}
+
+	<h4>Command output</h4>
+
+	<pre class="command-stdout">
+{{ stdout }}
+	</pre>
+
+{% endif %}
+
+
+{% if stderr %}
+
+	<h4>Command errors</h4>
+
+	<pre class="command-stderr">
+{{ stderr }}
+	</pre>
+
+{% endif %}
+
+{% endblock %}
