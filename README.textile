@@ -9,7 +9,7 @@ h2. WARNINGS
 
 It is working with some limitations, it is not tested and I'm NOT using it.
 The remote command is not working at all.
-DO NOT USE!!
+DO NOT USE IT IN PRODUCTION. 
 
 
 h2. PREREQUISITES
